@@ -33,3 +33,14 @@ header .navbar-left span {
   width: 155px;
   height: 28px;
  }
+
+ label {
+   display: inline-block;
+   max-width: 100%;
+   margin-bottom: 5px;
+   font-weight: bold;
+ }
+
+ div.field, div.actions {
+   margin-bottom: 10px;
+ }
