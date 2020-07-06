@@ -1,7 +1,20 @@
 <div class="container">
   <%= notice %>
+
+  <% if @book.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <h3><%= @book.errors.full_messages.count %> erros prohibited this obj from being saved:</h3>
+      <ul>
+        <% @book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
   <div class="row">
-    <%= render 'users/list', user: @user, book: @book_new %>
+    <%= render 'users/list', user: @user, book: @book %>
     
     <div class="col-xs-9">
       <h2>Books</h2>
